@@ -1,0 +1,22 @@
+#count the number of set bits in integer
+#n=5(101) count=2 because no.of 1's are 2
+#using % operator
+n=5
+count=0
+while(n):
+    if n%2==1:
+        count+=1
+    n=n//2
+print(count)
+#using bitwise operator
+#tc:O(log n)
+n=5
+count=0
+while(n):
+    if n&1==1:
+        count+=1
+    n=n>>1
+print(count)
+#using functions
+print(bin(5).count("1"))
+
